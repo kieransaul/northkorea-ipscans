@@ -1,0 +1,3 @@
+nmap -sV -O 175.45.176.0/22 -T4 -Pn > 175block.scan &
+
+cat 175blockfull190119.scan | grep -v "Host is up" | grep -v "Too many fingerprints match this host to give specific OS details" | grep -v "All 65535 scanned ports" > filtered.scan
